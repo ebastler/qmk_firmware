@@ -27,6 +27,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define PRODUCT         ebastler E80_1800
 #define DESCRIPTION     ebastler E80_1800
 
+/* Limit layer count to fit in storage with VIA enabled */
+#define DYNAMIC_KEYMAP_LAYER_COUNT 2
+
 /* key matrix size */
 #define MATRIX_ROWS 7
 #define MATRIX_COLS 19
