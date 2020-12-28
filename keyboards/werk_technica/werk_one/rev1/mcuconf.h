@@ -65,7 +65,7 @@
 /*
  * ADC driver system settings.
  */
-#define STM32_ADC_USE_ADC1                  TRUE
+#define STM32_ADC_USE_ADC1                  FALSE
 #define STM32_ADC_ADC1_DMA_PRIORITY         2
 #define STM32_ADC_IRQ_PRIORITY              2
 #define STM32_ADC_ADC1_DMA_IRQ_PRIORITY     2
@@ -118,9 +118,9 @@
  * PWM driver system settings.
  */
 #define STM32_PWM_USE_ADVANCED              FALSE
-#define STM32_PWM_USE_TIM1                  TRUE
-#define STM32_PWM_USE_TIM2                  TRUE
-#define STM32_PWM_USE_TIM3                  FALSE
+#define STM32_PWM_USE_TIM1                  FALSE
+#define STM32_PWM_USE_TIM2                  FALSE
+#define STM32_PWM_USE_TIM3                  TRUE
 #define STM32_PWM_TIM1_IRQ_PRIORITY         3
 #define STM32_PWM_TIM2_IRQ_PRIORITY         3
 #define STM32_PWM_TIM3_IRQ_PRIORITY         3
@@ -148,7 +148,7 @@
  * ST driver system settings.
  */
 #define STM32_ST_IRQ_PRIORITY               2
-#define STM32_ST_USE_TIMER                  3
+#define STM32_ST_USE_TIMER                  2
 
 /*
  * UART driver system settings.
