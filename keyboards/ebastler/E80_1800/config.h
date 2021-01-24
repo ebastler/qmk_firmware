@@ -20,12 +20,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "config_common.h"
 
 /* USB Device descriptor parameter */
-#define VENDOR_ID       0x6562 // "EB"
+#define VENDOR_ID       0x6562 // "eb"
 #define PRODUCT_ID      0x1338
 #define DEVICE_VER      0x0001
 #define MANUFACTURER    ebastler
-#define PRODUCT         ebastler E80_1800
-#define DESCRIPTION     ebastler E80_1800
+#define PRODUCT         E80-1800
 
 /* Limit layer count to fit in storage with VIA enabled */
 #define DYNAMIC_KEYMAP_LAYER_COUNT 2
@@ -52,9 +51,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define BACKLIGHT_ON_STATE 1
 #define BACKLIGHT_PWM_OUTPUT_FREQUENCY 1000 // Currently only does something if compiled with an unmerged PR. Does no harm without it.
 
-/* ADC - will be used once BT support is added*/
-#define ADC_PIN C0
-
 /* I2C for OLED */
 #define I2C_DRIVER I2CD2
 #define I2C1_SCL            10
@@ -67,5 +63,5 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define I2C1_TIMINGR_SCLH   3U
 #define I2C1_TIMINGR_SCLL   9U
 
-/* Set the OLED timeout to 30 s */
+/* Set the OLED timeout to 30 s to prevent burn-in */
 #define OLED_TIMEOUT 30000
