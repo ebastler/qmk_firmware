@@ -54,7 +54,7 @@ void oled_task_user(void) {
 }
 #endif
 
-/* turn OLED (if enabled) and backlight (if enabled) off on USB host suspend */
+/* turn OLED (if enabled) off on USB host suspend */
 void suspend_power_down_user(void) {
 #ifdef OLED_DRIVER_ENABLE
     oled_off();

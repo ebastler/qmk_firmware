@@ -15,4 +15,7 @@
  */
 #pragma once
 
+/* temporary workaround until https://github.com/qmk/qmk_firmware/pull/11600 is merged from dev into master */
+#define CH_CFG_USE_TM                       FALSE
+
 #include_next <chconf.h>

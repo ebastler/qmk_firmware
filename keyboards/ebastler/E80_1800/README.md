@@ -10,26 +10,8 @@ A replacement PCB for the Cherry G80-1800 keyboard. Supports ISO and ANSI, 6u of
 
 Bootmagic Lite key: Escape
 
-Layer toggle on 6u bottom row keympas: right menu key
+Make example for this keyboard (after setting up your build environment):
 
-Layer toggle on 7u bottom row keymaps: right control key
-
-Hardware control keys (All on layer 1):
-* End: Toggle backlight
-* Pg Up/Down: Increase/Decrease backlight brightness
-* Scroll Lock: Toggle backlight breathing
-
-Media control keys (All on layer 1):
-* Numpad 2/8: Volume down/up
-* Numpad 4/7: Previous/Next track
-* Numpad 5: Mute audio
-* Pause: Toggle play/pause
-
-Make example for this keyboard (after setting up your build environment) - pick your layout:
-
-    make ebastler/E80_1800:iso_6u
-    make ebastler/E80_1800:iso_7u
-    make ebastler/E80_1800:ansi_6u
-    make ebastler/E80_1800:ansi_7u
+    make ebastler/E80_1800:defalt
 
 See the [build environment setup](https://docs.qmk.fm/#/getting_started_build_tools) and the [make instructions](https://docs.qmk.fm/#/getting_started_make_guide) for more information. Brand new to QMK? Start with our [Complete Newbs Guide](https://docs.qmk.fm/#/newbs).
