@@ -15,7 +15,8 @@
  */
 #pragma once
 
-/* temporary workaround until https://github.com/qmk/qmk_firmware/pull/11600 is merged from dev into master */
-#define CH_CFG_USE_TM                       FALSE
+#define CH_CFG_ST_RESOLUTION 16
+
+#define CH_CFG_INTERVALS_SIZE 16
 
 #include_next <chconf.h>

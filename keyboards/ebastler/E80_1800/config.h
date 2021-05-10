@@ -27,7 +27,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define PRODUCT         E80-1800
 
 /* Limit layer count to fit in storage with VIA enabled */
-#define DYNAMIC_KEYMAP_LAYER_COUNT 2
+#define DYNAMIC_KEYMAP_LAYER_COUNT 3
 
 /* key matrix size */
 #define MATRIX_ROWS 7
@@ -47,7 +47,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define BACKLIGHT_PWM_DRIVER PWMD1
 #define BACKLIGHT_PWM_CHANNEL 2
 #define BACKLIGHT_PAL_MODE 2
-#define BACKLIGHT_LEVELS 6
+#define BACKLIGHT_LEVELS 5
 #define BACKLIGHT_ON_STATE 1
 #define BACKLIGHT_PWM_OUTPUT_FREQUENCY 1000 // Currently only does something if compiled with an unmerged PR. Does no harm without it.
 

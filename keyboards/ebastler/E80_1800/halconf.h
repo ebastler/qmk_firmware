@@ -16,8 +16,7 @@
 #pragma once
 
 /* temporary workaround until https://github.com/qmk/qmk_firmware/pull/11600 is merged from dev into master */
-#define HAL_USE_DAC                         FALSE
-#define HAL_USE_GPT                         FALSE
-#define HAL_USE_I2C                         TRUE
+#define HAL_USE_I2C TRUE
+#define HAL_USE_PWM TRUE
 
 #include_next <halconf.h>
