@@ -18,3 +18,7 @@ SLEEP_LED_ENABLE = no       # Breathing sleep LED during USB suspend
 NKRO_ENABLE = yes           # USB Nkey Rollover
 AUDIO_ENABLE = no           # Audio output
 ENCODER_ENABLE = yes
+
+# Enable custom matrix with pull-downs instead of pull-ups
+CUSTOM_MATRIX = yes
+SRC += matrix.c
