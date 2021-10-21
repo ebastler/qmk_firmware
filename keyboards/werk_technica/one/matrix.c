@@ -127,7 +127,7 @@ uint8_t matrix_scan(void) {
                 palSetPad(GPIOA, 5);
                 break;
             case 14:
-                palSetPad(GPIOA, 5);
+                palSetPad(GPIOB, 8);
                 break;
         }
 
@@ -182,7 +182,7 @@ uint8_t matrix_scan(void) {
                 palClearPad(GPIOA, 5);
                 break;
             case 14:
-                palClearPad(GPIOA, 5);
+                palClearPad(GPIOB, 8);
                 break;
         }
 
