@@ -30,8 +30,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define MATRIX_ROWS 6
 #define MATRIX_COLS 15
 
-#define MATRIX_ROW_PINS { A1, A2, A3, A4, B9, C15}
-#define MATRIX_COL_PINS { A7, B0, B1, B2, B10, B12, B13, B14, B15, A8, A9, A10, A6, A5, B8 }
+#define MATRIX_ROW_PINS { A0, A1, A2, A3, B9, B8 }
+#define MATRIX_COL_PINS { A6, A7, B0, B1, B10, B12, B13, B14, B15, A8, A10, A13, A5, A4, C15 }
 #define UNUSED_PINS
 
 /* COL2ROW, ROW2COL*/
