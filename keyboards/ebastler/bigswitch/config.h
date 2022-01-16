@@ -31,15 +31,15 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define UNUSED_PINS { B1, B2, B3, B4, B5, B6, B7, C6, C7, D0, D1, D4, D5, D7, E6, F0, F1, F4, F5, F6, F7 }
 
 /* Tapdance configs */
-#define TAPPING_TERM 200
+#define TAPPING_TERM 400
 
 /* Debounce reduces chatter (unintended double-presses) - set 0 if debouncing is not needed */
-#define DEBOUNCE 5
+#define DEBOUNCE 40
 
 /* Underglow */
 #define RGB_DI_PIN D2
 #define RGBLED_NUM 28
 #define RGBLIGHT_SLEEP // Turns LEDs off if the PC goes to sleep/shutdown
-#define RGBLIGHT_EFFECT_BREATHING
+/* #define RGBLIGHT_EFFECT_BREATHING */
 #define RGBLIGHT_EFFECT_RAINBOW_MOOD
-#define RGBLIGHT_EFFECT_RAINBOW_SWIRL
+/* #define RGBLIGHT_EFFECT_RAINBOW_SWIRL */

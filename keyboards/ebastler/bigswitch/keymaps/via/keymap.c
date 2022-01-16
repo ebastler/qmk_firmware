@@ -23,20 +23,17 @@ enum {
 /* Tapdance definition */
 void dance_onekey_finished(qk_tap_dance_state_t *state, void *user_data) {
   if (state->count == 1) {
-    register_code (KC_ESC);
-  }
-  else if (state->count == 2) {
     rgblight_toggle();
   }
-  else {
+  else if (state->count == 2) {
     rgblight_step();
+  }
+  else {
+    rgblight_increase_hue();
   }
 }
 
 void dance_onekey_reset(qk_tap_dance_state_t *state, void *user_data) {
-  if (state->count == 1) {
-    unregister_code (KC_ESC);
-  }
 }
 
 qk_tap_dance_action_t tap_dance_actions[] = {
