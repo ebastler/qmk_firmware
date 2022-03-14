@@ -1,0 +1,11 @@
+{
+    "keyboard_name": "ebastler bigswitch",
+    "maintainer": "ebastler",
+    "layouts": {
+        "LAYOUT_ortho_1x1": {
+            "layout": [
+                {"x": 0, "y": 0}
+            ]
+        }
+    }
+}
