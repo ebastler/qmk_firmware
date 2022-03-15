@@ -27,8 +27,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define PRODUCT         bigswitch
 
 /* Switch pins */
-#define DIRECT_PINS {{ D3 }}
-#define UNUSED_PINS { B1, B2, B3, B4, B5, B6, B7, C6, C7, D0, D1, D4, D5, D7, E6, F0, F1, F4, F5, F6, F7 }
+#define DIRECT_PINS {{ D3, D1, D0 }}
+#define UNUSED_PINS { B1, B2, B3, B4, B5, B6, B7, C6, C7, D4, D5, D7, E6, F0, F1, F4, F5, F6, F7 }
 
 /* Tapdance configs */
 #define TAPPING_TERM 400

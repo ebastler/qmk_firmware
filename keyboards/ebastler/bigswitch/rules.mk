@@ -16,5 +16,3 @@ NKRO_ENABLE = yes           # Enable N-Key Rollover
 BACKLIGHT_ENABLE = no       # Enable keyboard backlight functionality
 RGBLIGHT_ENABLE = yes       # Enable keyboard RGB underglow
 TAP_DANCE_ENABLE = yes		# Enable tapdance
-
-LAYOUTS = ortho_1x1

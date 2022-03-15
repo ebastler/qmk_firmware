@@ -2,9 +2,11 @@
     "keyboard_name": "ebastler bigswitch",
     "maintainer": "ebastler",
     "layouts": {
-        "LAYOUT_ortho_1x1": {
+        "LAYOUT_1x3": {
             "layout": [
-                {"x": 0, "y": 0}
+                {"x": 0, "y": 0},
+                {"x": 0, "y": 3},
+                {"x": 1, "y": 1}
             ]
         }
     }

@@ -18,8 +18,8 @@
 
 #include "quantum.h"
 
-#define LAYOUT_ortho_1x1( \
-  k00                     \
+#define LAYOUT_1x3(       \
+  k02, k01, k00           \
   ) {                     \
-      { k00 }             \
+      { k00, k01, k02 }   \
     }

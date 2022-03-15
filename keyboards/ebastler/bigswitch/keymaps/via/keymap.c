@@ -42,5 +42,19 @@ qk_tap_dance_action_t tap_dance_actions[] = {
 
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-  LAYOUT_ortho_1x1(TD(TD_ONEKEY))
+  [0] = LAYOUT_1x3(
+    RGB_VAD, RGB_VAI, TD(TD_ONEKEY)
+    ),
+
+  [1] = LAYOUT_1x3(
+    KC_TRNS, KC_TRNS, KC_TRNS
+    ),
+
+  [2] = LAYOUT_1x3(
+    KC_TRNS, KC_TRNS, KC_TRNS
+    ),
+
+  [3] = LAYOUT_1x3(
+    KC_TRNS, KC_TRNS, KC_TRNS
+    ),
 };
