@@ -36,10 +36,17 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 /* Debounce reduces chatter (unintended double-presses) - set 0 if debouncing is not needed */
 #define DEBOUNCE 5
 
-/* Underglow */
+/* LEDs */
 #define RGB_DI_PIN D2
-#define RGBLED_NUM 7
-#define RGBLIGHT_SLEEP // Turns LEDs off if the PC goes to sleep/shutdown
-/* #define RGBLIGHT_EFFECT_BREATHING */
-#define RGBLIGHT_EFFECT_RAINBOW_MOOD
-#define RGBLIGHT_EFFECT_RAINBOW_SWIRL
+#define DRIVER_LED_TOTAL 7
+
+#define RGB_MATRIX_STARTUP_VAL 200 // Sets the default brightness value, if none has been set
+#define RGB_MATRIX_STARTUP_SPD 10  // Sets the default animation speed, if none has been set
+#define RGB_MATRIX_STARTUP_SAT 240 // Sets the default saturation value, if none has been set
+
+// RGB Matrix Animation modes. Explicitly enabled
+// For full list of effects, see:
+// https://docs.qmk.fm/#/feature_rgb_matrix?id=rgb-matrix-effects
+#define ENABLE_RGB_MATRIX_BREATHING
+#define ENABLE_RGB_MATRIX_CYCLE_ALL
+#define ENABLE_RGB_MATRIX_DUAL_BEACON

@@ -26,13 +26,13 @@ void dance_onekey_finished(qk_tap_dance_state_t *state, void *user_data) {
     register_code(KC_ENT);
   }
   else if (state->count == 2) {
-    rgblight_toggle();
+    rgb_matrix_toggle();
   }
   else if (state->count == 3) {
-    rgblight_step();
+    rgb_matrix_step();
   }
   else {
-    rgblight_increase_hue();
+    rgb_matrix_increase_hue();
   }
 }
 
