@@ -46,9 +46,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 };
 
-/* Encoder */
-bool encoder_update_user(uint8_t index, bool clockwise) {
-/* The first if reads the first encoder, not needed on this board which only features a single one */
+#if defined(ENCODER_ENABLE)
+bool encoder_update_kb(uint8_t index, bool clockwise) {
+    if (!encoder_update_user(index, clockwise)) { return false; }
     if (index == 0) {
         /* The switch case allows for different encoder mappings on different layers, "default" map gets applied for all unspecified layers */
         switch(get_highest_layer(layer_state)){
@@ -77,3 +77,4 @@ bool encoder_update_user(uint8_t index, bool clockwise) {
     }
     return true;
 }
+#endif
