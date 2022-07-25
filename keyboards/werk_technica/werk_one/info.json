@@ -2,7 +2,7 @@
     "manufacturer": "werk_technica",
     "keyboard_name": "one",
     "maintainer": "ebastler",
-    "bootloader": "stm32-dfu",
+    "debounce": 5,
     "diode_direction": "COL2ROW",
     "features": {
         "bootmagic": true,
@@ -17,12 +17,14 @@
         "cols": [ "A6", "A7", "B0", "B1", "B10", "B12", "B13", "B14", "B15", "A8", "A10", "A13", "A5", "A4", "C15" ],
         "rows": [ "A0", "A1", "A2", "A3", "B9", "B8" ]
     },
+    "bootloader": "stm32-dfu",
     "processor": "STM32F411",
     "board": "GENERIC_STM32_F411XE",
     "url": "https://werktechnica.com/",
     "usb": {
         "pid": "0x0001",
-        "vid": "0x7774"
+        "vid": "0x7774",
+        "device_version": "1.0.0"
     },
     "layouts": {
         "LAYOUT_all": {
@@ -119,7 +121,7 @@
                 {"matrix":[5,14], "label":"RIGHT", "x":15.5, "y":5.5}
             ]
         },
-        "LAYOUT_ANSI": {
+        "LAYOUT_75_ansi": {
             "layout": [
                 {"matrix":[0,0], "label":"Esc", "x":0, "y":0},
                 {"matrix":[0,1], "label":"F1", "x":1.25, "y":0},
@@ -209,7 +211,7 @@
                 {"matrix":[5,14], "label":"RIGHT", "x":15.5, "y":5.5}
             ]
         },
-        "LAYOUT_ISO": {
+        "LAYOUT_75_iso": {
             "layout": [
                 {"matrix":[0,0], "label":"Esc", "x":0, "y":0},
                 {"matrix":[0,1], "label":"F1", "x":1.25, "y":0},
