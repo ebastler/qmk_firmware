@@ -4,7 +4,7 @@
 #define PRODUCT_ID      0x1224
 #define DEVICE_VER      0x0001
 #define MANUFACTURER    KBDfans
-#define PRODUCT         kbd67mkiirgb v1
+#define PRODUCT         kbd67mkiirgb v1e
 
 #define MATRIX_ROWS 5
 #define MATRIX_COLS 15
@@ -75,3 +75,17 @@
 #define DRIVER_1_LED_TOTAL 35
 #define DRIVER_2_LED_TOTAL 32
 #define DRIVER_LED_TOTAL (DRIVER_1_LED_TOTAL + DRIVER_2_LED_TOTAL)
+
+// Special defines for F072
+#define I2C_DRIVER I2CD1
+#define I2C1_SCL_PIN B6
+#define I2C1_SDA_PIN B7
+#define I2C1_SCL_PAL_MODE   1
+#define I2C1_SDA_PAL_MODE   1
+
+/* Set I2C speed to 400kHz, 300ns Tr, 14ns Tf */
+#define I2C1_TIMINGR_PRESC   0x1U
+#define I2C1_TIMINGR_SCLDEL  0x9U
+#define I2C1_TIMINGR_SDADEL  0x0U
+#define I2C1_TIMINGR_SCLH   0x0cU
+#define I2C1_TIMINGR_SCLL   0x22U

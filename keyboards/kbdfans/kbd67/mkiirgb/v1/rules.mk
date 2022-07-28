@@ -1,6 +1,6 @@
 # MCU name
-MCU = STM32F303
-BOARD = QMK_PROTON_C
+MCU = STM32F072
+BOARD = GENERIC_STM32_F072XB
 
 # Bootloader selection
 BOOTLOADER = stm32-dfu
