@@ -10,3 +10,6 @@ increase the value. If you need 2 clicks for 1 keycode, decrease*/
 #define ENCODERS_PAD_A { B5 }
 #define ENCODERS_PAD_B { A15 }
 #define TAP_CODE_DELAY 10
+
+/* Set HSE clock since it differs from F411 default */
+#define STM32_HSECLK 16000000
