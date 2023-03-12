@@ -2,8 +2,6 @@
 
 # The default keymap for Durgod Hades.
 
-Currently only supports ANSI
-
 This keymap is intended to closely follow the stock Durgod Hades layout. RGB Hue and Saturation can be changed Fn1 + Fn2 + arrow keys. 
 
 ## Windows key lock

@@ -2,7 +2,7 @@
 
 This DGK6X code is shared between the ANSI variants of Venus, Hades and Galaxy keyboards. 
 
-* Keyboard Maintainer: [J-Sully](https://github.com/J-Sully) and [dkjer](https://github.com/dkjer)
+* Keyboard Maintainer: [J-Sully](https://github.com/J-Sully) and [dkjer](https://github.com/dkjer), ISO version of Hades added by [ebastler](https://github.com/ebastler) based on their work
 * Hardware Supported: Durgod Venus, Hades or Galaxy board with STM32F070RBT6 
 * Hardware Availability: [Venus](https://www.amazon.com/dp/B07XFP5MMZ), [Hades](https://www.amazon.com/gp/product/B08562392T) and [Galaxy](https://www.amazon.com/Galaxy-75-Modular-Mechanical-Keyboard/dp/B08PDRD8MP)
 

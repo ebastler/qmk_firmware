@@ -1,6 +1,6 @@
 ![Durgod Hades Layout Image](https://i.imgur.com/vsi6sdK.png)
 
-# The default keymap for Durgod Hades.
+# The via keymap for Durgod Hades.
 
 This keymap is intended to closely follow the stock Durgod Hades layout. RGB Hue and Saturation can be changed Fn1 + Fn2 + arrow keys. 
 
