@@ -14,7 +14,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "hades.h"
+#include "hades_ansi.h"
 
 #ifdef RGB_MATRIX_ENABLE
 

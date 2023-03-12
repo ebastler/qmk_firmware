@@ -13,21 +13,17 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
+
 #pragma once
 
-#include "quantum.h"
 
-#ifdef KEYBOARD_durgod_dgk6x_hades_ansi
-#   include "hades_ansi.h"
-#elif defined KEYBOARD_durgod_dgk6x_hades_iso
-#   include "hades_iso.h"
-#elif defined KEYBOARD_durgod_dgk6x_venus
-#   include "venus.h"
-#elif defined KEYBOARD_durgod_dgk6x_galaxy
-#   include "galaxy.h"
+/* key matrix rows */
+#define MATRIX_ROW_PINS { A0, A1, A2, A3, A4 }
+
+/* key matrix columns */
+#define MATRIX_COL_PINS { B0, B1, B2, B10, B11, B12, B13, B14, B15, C6, C7, C8, C9, C10, C11 }
+
+#ifdef RGB_MATRIX_ENABLE
+#define DRIVER_1_LED_TOTAL 59
+#define DRIVER_2_LED_TOTAL 10   
 #endif
-
-/* Function Prototype */
-void off_all_leds(void);
-void on_all_leds(void);
-
