@@ -1,4 +1,4 @@
-![Durgod Hades Layout Image](https://i.imgur.com/vsi6sdK.png)
+![Durgod Hades Layout Image](https://i.imgur.com/vsi6sdKh.png)
 
 # The default keymap for Durgod Hades.
 
