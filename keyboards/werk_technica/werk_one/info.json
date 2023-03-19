@@ -2,14 +2,22 @@
     "manufacturer": "werk_technica",
     "keyboard_name": "one",
     "maintainer": "ebastler",
-    "debounce": 5,
+    "url": "https://werktechnica.com/",
+    "bootloader": "stm32-dfu",
+    "processor": "STM32F411",
+    "board": "GENERIC_STM32_F411XE",
+    "usb": {
+        "pid": "0x0001",
+        "vid": "0x7774",
+        "device_version": "1.0.0"
+    },
     "diode_direction": "COL2ROW",
     "features": {
         "bootmagic": true,
         "command": false,
         "console": false,
         "extrakey": true,
-        "mousekey": false,
+        "mousekey": true,
         "nkro": true,
         "encoder": true
     },
@@ -17,14 +25,14 @@
         "cols": [ "A6", "A7", "B0", "B1", "B10", "B12", "B13", "B14", "B15", "A8", "A10", "A13", "A5", "A4", "C15" ],
         "rows": [ "A0", "A1", "A2", "A3", "B9", "B8" ]
     },
-    "bootloader": "stm32-dfu",
-    "processor": "STM32F411",
-    "board": "GENERIC_STM32_F411XE",
-    "url": "https://werktechnica.com/",
-    "usb": {
-        "pid": "0x0001",
-        "vid": "0x7774",
-        "device_version": "1.0.0"
+    "encoder": {
+        "rotary": [
+            { 
+                "pin_a": "B5", 
+                "pin_b": "A15",
+                "resolution": 4
+            }
+        ]
     },
     "layouts": {
         "LAYOUT_all": {

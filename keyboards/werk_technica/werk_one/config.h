@@ -1,15 +1,7 @@
-// Copyright 2022 moritz plattner (moritz plattner)
+// Copyright 2022 QMK
 // SPDX-License-Identifier: GPL-2.0-or-later
 
 #pragma once
-
-/* Rotary encoder - set the resolution fitting your encoder.
-Most will need a value of 4. If 1 encoder click results in 2 keycodes sent
-increase the value. If you need 2 clicks for 1 keycode, decrease*/
-#define ENCODER_RESOLUTION 4
-#define ENCODERS_PAD_A { B5 }
-#define ENCODERS_PAD_B { A15 }
-#define TAP_CODE_DELAY 10
 
 /* Set HSE clock since it differs from F411 default */
 #define STM32_HSECLK 16000000
