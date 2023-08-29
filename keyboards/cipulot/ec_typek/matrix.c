@@ -1,4 +1,4 @@
-#/* Copyright 2023 Cipulot
+/* Copyright 2023 Cipulot
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -14,7 +14,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "ec_switch_matrix.h"
+#include "keyboards/cipulot/common/ec_switch_matrix.h"
 #include "matrix.h"
 
 extern matrix_row_t raw_matrix[MATRIX_ROWS]; // raw values

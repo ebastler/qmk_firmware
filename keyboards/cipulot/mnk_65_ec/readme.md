@@ -1,9 +1,11 @@
 # Monokei MNK 65 EC
 
+![MNK 65 EC PCB]()
+
 EC version of the Monokei MNK 65.
 
 * Keyboard Maintainer: [cipulot](https://github.com/cipulot)
-* Hardware Supported: Monokei MNK 60 EC
+* Hardware Supported: Monokei MNK 65 EC
 * Hardware Availability: [Monokei](https://monokei.co/)
 
 Make example for this keyboard (after setting up your build environment):

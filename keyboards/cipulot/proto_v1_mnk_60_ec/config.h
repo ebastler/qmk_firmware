@@ -17,10 +17,10 @@
 #pragma once
 
 #define MATRIX_ROWS 5
-#define MATRIX_COLS 14
+#define MATRIX_COLS 15
 
 #define MATRIX_ROW_PINS \
-    { B13, B14, B15, A8, A15 }
+    { A7, B0, A4, A5, A6 }
 
 #define AMUX_COUNT 2
 #define AMUX_MAX_COLS_COUNT 8
@@ -29,21 +29,20 @@
     { B7, B3 }
 
 #define AMUX_SEL_PINS \
-    { B6, B5, B4 }
+    { B4, B5, B6 }
 
 #define AMUX_COL_CHANNELS_SIZES \
-    { 8, 6 }
+    { 8, 7 }
 
 #define AMUX_0_COL_CHANNELS \
-    { 0, 3, 1, 2, 4, 5, 6, 7 }
+    { 0, 3, 1, 2, 5, 7, 6, 4 }
 
-#define AMUX_1_COL_CHANNELS \
-    { 0, 3, 1, 2, 4, 5 }
+#define AMUX_1_COL_CHANNELS AMUX_0_COL_CHANNELS
 
 #define AMUX_COL_CHANNELS AMUX_0_COL_CHANNELS, AMUX_1_COL_CHANNELS
 
-#define DISCHARGE_PIN A3
-#define ANALOG_PORT A2
+#define DISCHARGE_PIN A2
+#define ANALOG_PORT A1
 
 #define DEFAULT_ACTUATION_MODE 0
 #define DEFAULT_MODE_0_ACTUATION_LEVEL 550
@@ -61,7 +60,7 @@
 
 // #define DEBUG_MATRIX_SCAN_RATE
 
-#define EECONFIG_KB_DATA_SIZE 150
+#define EECONFIG_KB_DATA_SIZE 160
 
 /* Mechanical locking support. Use KC_LCAP, KC_LNUM or KC_LSCR instead in keymap */
 #define LOCKING_SUPPORT_ENABLE

@@ -1,12 +1,10 @@
-# MNK 60 EC
+# Monokei MNK 60 EC
 
-![MNK 60 EC PCB]()
-
-EC version of the Monokei MNK 66.
+EC version of the Monokei MNK 60.
 
 * Keyboard Maintainer: [cipulot](https://github.com/cipulot)
-* Hardware Supported: MNK 60 EC PCB
-* Hardware Availability: [KLC](https://klc-playground.com/)
+* Hardware Supported: Monokei MNK 60 EC
+* Hardware Availability: [Monokei](https://monokei.co/)
 
 Make example for this keyboard (after setting up your build environment):
 
