@@ -1,0 +1,100 @@
+/* Copyright 2023 Cipulot
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 2 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
+#include "ec_switch_matrix.h"
+#include "quantum.h"
+
+void eeconfig_init_kb(void) {
+    // Default values
+    // INDICATOR 0: RIGHT INDICATOR
+    eeprom_ec_config.ind1.h       = 0;
+    eeprom_ec_config.ind1.s       = 255;
+    eeprom_ec_config.ind1.v       = 150;
+    eeprom_ec_config.ind1.func    = 0x76;
+    eeprom_ec_config.ind1.index   = 0;
+    eeprom_ec_config.ind1.enabled = true;
+
+    // INDICATOR 1: MIDDLE INDICATOR
+    eeprom_ec_config.ind2.h       = 86;
+    eeprom_ec_config.ind2.s       = 255;
+    eeprom_ec_config.ind2.v       = 150;
+    eeprom_ec_config.ind2.func    = 0x75;
+    eeprom_ec_config.ind2.index   = 1;
+    eeprom_ec_config.ind2.enabled = true;
+
+    // INDICATOR 2: LEFT INDICATOR
+    eeprom_ec_config.ind3.h       = 166;
+    eeprom_ec_config.ind3.s       = 254;
+    eeprom_ec_config.ind3.v       = 150;
+    eeprom_ec_config.ind3.func    = 0x01;
+    eeprom_ec_config.ind3.index   = 2;
+    eeprom_ec_config.ind3.enabled = true;
+
+    // EC
+    eeprom_ec_config.actuation_mode                 = DEFAULT_ACTUATION_MODE;
+    eeprom_ec_config.mode_0_actuation_threshold     = DEFAULT_MODE_0_ACTUATION_LEVEL;
+    eeprom_ec_config.mode_0_release_threshold       = DEFAULT_MODE_0_RELEASE_LEVEL;
+    eeprom_ec_config.mode_1_initial_deadzone_offset = DEFAULT_MODE_1_INITIAL_DEADZONE_OFFSET;
+    eeprom_ec_config.mode_1_actuation_sensitivity   = DEFAULT_MODE_1_ACTUATION_SENSITIVITY;
+    eeprom_ec_config.mode_1_release_sensitivity     = DEFAULT_MODE_1_RELEASE_SENSITIVITY;
+
+    for (uint8_t row = 0; row < MATRIX_ROWS; row++) {
+        for (uint8_t col = 0; col < MATRIX_COLS; col++) {
+            eeprom_ec_config.bottoming_reading[row][col] = DEFAULT_BOTTOMING_READING;
+        }
+    }
+    // Write default value to EEPROM now
+    eeconfig_update_kb_datablock(&eeprom_ec_config);
+}
+
+// On Keyboard startup
+void keyboard_post_init_kb(void) {
+    // Read custom menu variables from memory
+    eeconfig_read_kb_datablock(&eeprom_ec_config);
+
+    // Set runtime values to EEPROM values
+    ec_config.actuation_mode                 = eeprom_ec_config.actuation_mode;
+    ec_config.mode_0_actuation_threshold     = eeprom_ec_config.mode_0_actuation_threshold;
+    ec_config.mode_0_release_threshold       = eeprom_ec_config.mode_0_release_threshold;
+    ec_config.mode_1_initial_deadzone_offset = eeprom_ec_config.mode_1_initial_deadzone_offset;
+    ec_config.mode_1_actuation_sensitivity   = eeprom_ec_config.mode_1_actuation_sensitivity;
+    ec_config.mode_1_release_sensitivity     = eeprom_ec_config.mode_1_release_sensitivity;
+    ec_config.bottoming_calibration          = false;
+    for (uint8_t row = 0; row < MATRIX_ROWS; row++) {
+        for (uint8_t col = 0; col < MATRIX_COLS; col++) {
+            ec_config.bottoming_calibration_starter[row][col]           = true;
+            ec_config.bottoming_reading[row][col]                       = eeprom_ec_config.bottoming_reading[row][col];
+            ec_config.rescaled_mode_0_actuation_threshold[row][col]     = rescale(ec_config.mode_0_actuation_threshold, 0, 1023, ec_config.noise_floor[row][col], eeprom_ec_config.bottoming_reading[row][col]);
+            ec_config.rescaled_mode_0_release_threshold[row][col]       = rescale(ec_config.mode_0_release_threshold, 0, 1023, ec_config.noise_floor[row][col], eeprom_ec_config.bottoming_reading[row][col]);
+            ec_config.rescaled_mode_1_initial_deadzone_offset[row][col] = rescale(ec_config.mode_1_initial_deadzone_offset, 0, 1023, ec_config.noise_floor[row][col], eeprom_ec_config.bottoming_reading[row][col]);
+        }
+    }
+
+    rgblight_set_effect_range(3, 66);
+    indicators_callback();
+}
+
+// This function gets called when caps, num, scroll change
+bool led_update_kb(led_t led_state) {
+    indicators_callback();
+    return true;
+}
+
+// This function is called when layers change
+layer_state_t layer_state_set_user(layer_state_t state) {
+    indicators_callback();
+    return state;
+}
