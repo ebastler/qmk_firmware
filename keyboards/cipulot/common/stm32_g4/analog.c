@@ -283,6 +283,8 @@ __attribute__((weak)) adc_mux pinToMux(pin_t pin) {
         case B2:  return TO_MUX( ADC_CHANNEL_IN12, 1 );
         case A5:  return TO_MUX( ADC_CHANNEL_IN13, 1 );
         case B15: return TO_MUX( ADC_CHANNEL_IN15, 1 );
+        // There are also OSC_IN and OSC_OUT pins that support internally ADC.
+        // Those are gonna be excluded from the support to avoid conflicts with the OSC_X functionalities
 #elif defined(RP2040)
         case 26U: return TO_MUX(0, 0);
         case 27U: return TO_MUX(1, 0);
