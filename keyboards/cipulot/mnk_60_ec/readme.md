@@ -6,7 +6,7 @@ EC version of the Monokei MNK 66.
 
 * Keyboard Maintainer: [cipulot](https://github.com/cipulot)
 * Hardware Supported: MNK 60 EC PCB
-* Hardware Availability: [KLC](https://klc-playground.com/)
+* Hardware Availability: [Monokei](https://monokei.co/)
 
 Make example for this keyboard (after setting up your build environment):
 
