@@ -71,9 +71,9 @@ void select_amux_channel(uint8_t channel, uint8_t col) {
     // momentarily disable specified multiplexer
     writePinHigh(amux_en_pins[channel]);
     // Select the multiplexer channel
-    writePin(amux_sel_pins[0], ch & 1);
-    writePin(amux_sel_pins[1], ch & 2);
-    writePin(amux_sel_pins[2], ch & 4);
+    for (uint8_t i = 0; i < AMUX_SEL_PINS_COUNT; i++) {
+        writePin(amux_sel_pins[i], ch & (1 << i));
+    }
     // re enable specified multiplexer
     writePinLow(amux_en_pins[channel]);
 }
