@@ -282,6 +282,7 @@ bool ec_update_key(matrix_row_t* current_row, uint8_t row, uint8_t col, uint16_t
             // Out of DA zone
             if (sw_value < ec_config.extremum[row][col]) {
                 ec_config.extremum[row][col] = sw_value;
+                *current_row &= ~(1 << col);
             }
         }
     }
