@@ -1,0 +1,34 @@
+{
+    "manufacturer": "Cipulot",
+    "keyboard_name": "EC Je-BAE-Ted",
+    "maintainer": "Cipulot",
+    "bootloader": "stm32-dfu",
+    "build": {
+        "lto": true
+    },
+    "diode_direction": "COL2ROW",
+    "features": {
+        "bootmagic": false,
+        "console": true,
+        "extrakey": true,
+        "mousekey": true,
+        "nkro": true
+    },
+    "processor": "STM32G431",
+    "usb": {
+        "device_version": "0.0.1",
+        "pid": "0x6BBA",
+        "shared_endpoint": {
+            "keyboard": true
+        },
+        "vid": "0x6369"
+    },
+    "layouts": {
+        "LAYOUT": {
+            "layout": [
+                { "matrix": [0, 0], "w": 1.5, "x": 0.75, "y": 0 },
+                { "matrix": [1, 0], "w": 2.25, "x": 0, "y": 1 }
+            ]
+        }
+    }
+}
