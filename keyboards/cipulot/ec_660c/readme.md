@@ -1,6 +1,6 @@
 # EC660C
 
-![EC660C PCB]()
+![EC660C PCB](https://i.imgur.com/fQhyVSTh.jpg)
 
 Open source replacement PCB for the  Leopold FC660C.£
 

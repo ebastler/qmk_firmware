@@ -1,8 +1,8 @@
 # NEVEREST 60
 
-![NEVEREST 60]()
+![NEVEREST 60](https://i.imgur.com/w0igG9Oh.jpg)
 
-NEVEREST 60.
+Native QMK support for the NEVEREST 60.
 
 * Keyboard Maintainer: [cipulot](https://github.com/cipulot)
 * Hardware Supported: NEVEREST 60
