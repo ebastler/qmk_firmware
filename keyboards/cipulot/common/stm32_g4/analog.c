@@ -118,7 +118,7 @@
 #    if defined(ADC_SMPR_SMP_1P5)
 #        define ADC_SAMPLING_RATE ADC_SMPR_SMP_1P5
 #    elif defined(ADC_SMPR_SMP_2P5) // STM32L4XX, STM32L4XXP, STM32G4XX, STM32WBXX
-#        define ADC_SAMPLING_RATE ADC_SMPR_SMP_92P5
+#        define ADC_SAMPLING_RATE ADC_SMPR_SMP_2P5
 #    else
 #        error "Cannot determine the default ADC_SAMPLING_RATE for this MCU."
 #    endif
