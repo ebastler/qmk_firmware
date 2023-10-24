@@ -368,16 +368,6 @@ int16_t adc_read(adc_mux mux) {
         return 0;
     }
 
-    static uint16_t last_print;
-    if (timer_elapsed(last_print) > 10) {
-        last_print = timer_read();
-        uprintf("[ADC]");
-        for (int i = 0; i < ADC_REAL_NUM_CHANNELS; ++i) {
-            uprintf(" %5d", sampleBuffer[i]);
-        }
-        uprintf("\n");
-    }
-
 #if defined(USE_ADCV2) || defined(RP2040)
     // fake 12-bit -> N-bit scale
     return (sampleBuffer[ADC_DUMMY_CONVERSIONS_AT_START]) >> (12 - ADC_RESOLUTION);
