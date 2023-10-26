@@ -84,12 +84,10 @@
 #ifndef ADC_COUNT
 #    if defined(RP2040) || defined(STM32F0XX) || defined(STM32F1XX) || defined(STM32F4XX) || defined(GD32VF103) || defined(WB32F3G71xx) || defined(WB32FQ95xx)
 #        define ADC_COUNT 1
-#    elif defined(STM32F3XX)
+#    elif defined(STM32F3XX) || defined(STM32G4XX)
 #        define ADC_COUNT 4
 #    elif defined(STM32L4XX)
 #        define ADC_COUNT 3
-#    elif defined(STM32G4XX)
-#        define ADC_COUNT 4
 #    else
 #        error "ADC_COUNT has not been set for this ARM microcontroller."
 #    endif
