@@ -86,9 +86,7 @@
 #        define ADC_COUNT 1
 #    elif defined(STM32F3XX)
 #        define ADC_COUNT 4
-#    elif defined(STM32L4XX)
-#        define ADC_COUNT 3
-#    elif defined(STM32G4XX)
+#    elif defined(STM32L4XX) || defined(STM32G4XX)
 #        define ADC_COUNT 3
 #    else
 #        error "ADC_COUNT has not been set for this ARM microcontroller."
