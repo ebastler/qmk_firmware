@@ -86,8 +86,10 @@
 #        define ADC_COUNT 1
 #    elif defined(STM32F3XX)
 #        define ADC_COUNT 4
-#    elif defined(STM32L4XX) || defined(STM32G4XX)
+#    elif defined(STM32L4XX)
 #        define ADC_COUNT 3
+#    elif defined(STM32G4XX)
+#        define ADC_COUNT 4
 #    else
 #        error "ADC_COUNT has not been set for this ARM microcontroller."
 #    endif
@@ -262,8 +264,8 @@ __attribute__((weak)) adc_mux pinToMux(pin_t pin) {
         // STM32F103x[C-G] in 144-pin packages also have analog inputs on F6...F10, but they are on ADC3, and the
         // ChibiOS ADC driver for STM32F1xx currently supports only ADC1, therefore these pins are not usable.
 #elif defined(STM32L4XX)
-        case A0: return TO_MUX( ADC_CHANNEL_IN5,  0 );
-        case A1: return TO_MUX( ADC_CHANNEL_IN6,  0 );
+        case A0: return TO_MUX( ADC_CHANNEL_IN5,  0 ); // Can also be ADC2 in some cases
+        case A1: return TO_MUX( ADC_CHANNEL_IN6,  0 ); // Can also be ADC2 in some cases
         case A2: return TO_MUX( ADC_CHANNEL_IN7,  0 ); // Can also be ADC2
         case A3: return TO_MUX( ADC_CHANNEL_IN8,  0 ); // Can also be ADC2
         case A4: return TO_MUX( ADC_CHANNEL_IN9,  0 ); // Can also be ADC2
@@ -272,13 +274,24 @@ __attribute__((weak)) adc_mux pinToMux(pin_t pin) {
         case A7: return TO_MUX( ADC_CHANNEL_IN12, 0 ); // Can also be ADC2
         case B0: return TO_MUX( ADC_CHANNEL_IN15, 0 ); // Can also be ADC2
         case B1: return TO_MUX( ADC_CHANNEL_IN16, 0 ); // Can also be ADC2
-        case C0: return TO_MUX( ADC_CHANNEL_IN1,  0 ); // Can also be ADC2
-        case C1: return TO_MUX( ADC_CHANNEL_IN2,  0 ); // Can also be ADC2
-        case C2: return TO_MUX( ADC_CHANNEL_IN3,  0 ); // Can also be ADC2
-        case C3: return TO_MUX( ADC_CHANNEL_IN4,  0 ); // Can also be ADC2
+        case C0: return TO_MUX( ADC_CHANNEL_IN1,  0 ); // Can also be ADC2 or ADC3
+        case C1: return TO_MUX( ADC_CHANNEL_IN2,  0 ); // Can also be ADC2 or ADC3
+        case C2: return TO_MUX( ADC_CHANNEL_IN3,  0 ); // Can also be ADC2 or ADC3
+        case C3: return TO_MUX( ADC_CHANNEL_IN4,  0 ); // Can also be ADC2 or ADC3
         case C4: return TO_MUX( ADC_CHANNEL_IN13, 0 ); // Can also be ADC2
         case C5: return TO_MUX( ADC_CHANNEL_IN14, 0 ); // Can also be ADC2
+#    if STM32_ADC_USE_ADC3
+        case F3:  return TO_MUX( ADC_CHANNEL_IN6,  2 );
+        case F4:  return TO_MUX( ADC_CHANNEL_IN7,  2 );
+        case F5:  return TO_MUX( ADC_CHANNEL_IN8,  2 );
+        case F6:  return TO_MUX( ADC_CHANNEL_IN9,  2 );
+        case F7:  return TO_MUX( ADC_CHANNEL_IN10, 2 );
+        case F8:  return TO_MUX( ADC_CHANNEL_IN11, 2 );
+        case F9:  return TO_MUX( ADC_CHANNEL_IN12, 2 );
+        case F10: return TO_MUX( ADC_CHANNEL_IN13, 2 );
+#    endif
 #elif defined(STM32G4XX)
+#    if STM32_ADC_USE_ADC1
         case A0:  return TO_MUX( ADC_CHANNEL_IN1,  0 );
         case A1:  return TO_MUX( ADC_CHANNEL_IN2,  0 );
         case A2:  return TO_MUX( ADC_CHANNEL_IN3,  0 );
@@ -293,18 +306,28 @@ __attribute__((weak)) adc_mux pinToMux(pin_t pin) {
         case C2:  return TO_MUX( ADC_CHANNEL_IN8,  0 );
         case C3:  return TO_MUX( ADC_CHANNEL_IN9,  0 );
         case F0:  return TO_MUX( ADC_CHANNEL_IN10, 0 );
+#    endif
 #    if STM32_ADC_USE_ADC2
+        case A0:  return TO_MUX( ADC_CHANNEL_IN1,  1 );
+        case A1:  return TO_MUX( ADC_CHANNEL_IN2,  1 );
         case A4:  return TO_MUX( ADC_CHANNEL_IN17, 1 );
         case A5:  return TO_MUX( ADC_CHANNEL_IN13, 1 );
         case A6:  return TO_MUX( ADC_CHANNEL_IN3,  1 );
         case A7:  return TO_MUX( ADC_CHANNEL_IN4,  1 );
         case B2:  return TO_MUX( ADC_CHANNEL_IN12, 1 );
+        case B11: return TO_MUX( ADC_CHANNEL_IN14, 1 );
         case B15: return TO_MUX( ADC_CHANNEL_IN15, 1 );
+        case C0:  return TO_MUX( ADC_CHANNEL_IN6,  1 );
+        case C1:  return TO_MUX( ADC_CHANNEL_IN7,  1 );
+        case C2:  return TO_MUX( ADC_CHANNEL_IN8,  1 );
+        case C3:  return TO_MUX( ADC_CHANNEL_IN9,  1 );
         case C4:  return TO_MUX( ADC_CHANNEL_IN5,  1 );
         case C5:  return TO_MUX( ADC_CHANNEL_IN11, 1 );
         case F1:  return TO_MUX( ADC_CHANNEL_IN10, 1 );
 #    endif
 #    if STM32_ADC_USE_ADC3
+        case B0:  return TO_MUX( ADC_CHANNEL_IN12, 2 );
+        case B1:  return TO_MUX( ADC_CHANNEL_IN1,  2 );
         case B13: return TO_MUX( ADC_CHANNEL_IN5,  2 );
         case D10: return TO_MUX( ADC_CHANNEL_IN7,  2 );
         case D11: return TO_MUX( ADC_CHANNEL_IN8,  2 );
@@ -318,6 +341,24 @@ __attribute__((weak)) adc_mux pinToMux(pin_t pin) {
         case E11: return TO_MUX( ADC_CHANNEL_IN15, 2 );
         case E12: return TO_MUX( ADC_CHANNEL_IN16, 2 );
         case E13: return TO_MUX( ADC_CHANNEL_IN3,  2 );
+#    endif
+#   if STM32_ADC_USE_ADC4
+        case B12: return TO_MUX( ADC_CHANNEL_IN3,  3 );
+        case B14: return TO_MUX( ADC_CHANNEL_IN4,  3 );
+        case B15: return TO_MUX( ADC_CHANNEL_IN5,  3 );
+        case D8:  return TO_MUX( ADC_CHANNEL_IN12, 3 );
+        case D9:  return TO_MUX( ADC_CHANNEL_IN13, 3 );
+        case D10: return TO_MUX( ADC_CHANNEL_IN7,  3 );
+        case D11: return TO_MUX( ADC_CHANNEL_IN8,  3 );
+        case D12: return TO_MUX( ADC_CHANNEL_IN9,  3 );
+        case D13: return TO_MUX( ADC_CHANNEL_IN10, 3 );
+        case D14: return TO_MUX( ADC_CHANNEL_IN11, 3 );
+        case E5:  return TO_MUX( ADC_CHANNEL_IN2,  3 );
+        case E8:  return TO_MUX( ADC_CHANNEL_IN6,  3 );
+        case E10: return TO_MUX( ADC_CHANNEL_IN14, 3 );
+        case E11: return TO_MUX( ADC_CHANNEL_IN15, 3 );
+        case E12: return TO_MUX( ADC_CHANNEL_IN16, 3 );
+        case E14: return TO_MUX( ADC_CHANNEL_IN1,  3 );
 #    endif
 #elif defined(RP2040)
         case 26U: return TO_MUX(0, 0);
