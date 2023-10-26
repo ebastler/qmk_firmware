@@ -23,4 +23,4 @@
 
 /* This config is wrong in ChibiOS upstream. */
 #undef STM32_FLASH_SECTORS_PER_BANK
-#define STM32_FLASH_SECTORS_PER_BANK 64
+#define STM32_FLASH_SECTORS_PER_BANK 128 //128 for G431CBU6
