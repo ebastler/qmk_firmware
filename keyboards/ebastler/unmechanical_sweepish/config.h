@@ -21,6 +21,8 @@
 #define MATRIX_ROWS_PER_HAND 5
 #define MATRIX_COLS 4
 
+#define AMUX_MAX_COLS_COUNT 8
+
 #define AMUX_COUNT 1
 #define AMUX_EN_PINS        { F0 }
 #define AMUX_COL_CHANNELS_SIZES { 4 }
@@ -28,7 +30,7 @@
 #define MATRIX_ROW_PINS     { A5, A6, A15, A14, A13 }
 #define AMUX_0_COL_CHANNELS { 3, 0, 1, 2 }
 #define AMUX_COL_CHANNELS AMUX_0_COL_CHANNELS
-#define MUX_SEL_PINS        { C15, C14, C13 }
+#define AMUX_SEL_PINS        { C15, C14, C13 }
 
 /* Hardware peripherals pins */
 #define DISCHARGE_PIN A0
@@ -71,4 +73,6 @@
 
 #define SPLIT_HAND_PIN B9               // The MCUs will probe a pin to determine if they are left or right side. high = left, low = right
 
-#define EECONFIG_KB_DATA_SIZE 60
+#define EECONFIG_KB_DATA_SIZE 90
+
+#define ADC_COUNT 3
