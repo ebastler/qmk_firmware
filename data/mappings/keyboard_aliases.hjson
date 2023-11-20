@@ -272,6 +272,9 @@
     "helix/rev2/under/oled": {
         "target": "helix/rev2/under"
     },
+    "hmkb/bor60": {
+        "target": "hmkb/bor60/solder"
+    },
     "honeycomb": {
         "target": "keyhive/honeycomb"
     },

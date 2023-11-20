@@ -1,0 +1,11 @@
+{
+    "usb": {
+        "device_version": "1.0.0",
+        "pid": "0x0003"
+    },
+    "indicators": {
+        "caps_lock": "A8",
+        "on_state": 0
+    }
+    
+}
