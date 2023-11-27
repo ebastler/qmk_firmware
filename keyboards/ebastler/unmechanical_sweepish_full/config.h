@@ -17,8 +17,10 @@
 #pragma once
 
 /* Custom matrix pins and port select array */
-#define MATRIX_ROWS 5
+#define MATRIX_ROWS 10
+#define MATRIX_ROWS_PER_HAND 5
 #define MATRIX_COLS 4
+
 #define AMUX_MAX_COLS_COUNT 8
 
 #define AMUX_COUNT 1
@@ -52,7 +54,25 @@
 /* solenoid stuff */
 #define SOLENOID_PIN B2
 
+/* Set up split communications */
+#define SERIAL_USART_DRIVER SD3
+#define SERIAL_USART_PIN_SWAP
+#define SERIAL_USART_TX_PIN B10
+#define SERIAL_USART_TX_PAL_MODE 7
+#define SERIAL_USART_RX_PIN B11
+#define SERIAL_USART_RX_PAL_MODE 7
+#define SERIAL_USART_FULL_DUPLEX
 
-#define EECONFIG_KB_DATA_SIZE 50
+#if defined(SOFT_SERIAL_PIN)
+#    define SERIAL_USART_TX_PIN SOFT_SERIAL_PIN
+#endif
+
+//#define SELECT_SOFT_SERIAL_SPEED {0}  // Experimental, will make connection faster but may need tes
+/* Set up various split configurations */
+#define USB_VBUS_PIN A8                 // The side that manages to establish a USB connection will be master. Disabled because default on ARM targets.
+
+#define SPLIT_HAND_PIN B9               // The MCUs will probe a pin to determine if they are left or right side. high = left, low = right
+
+#define EECONFIG_KB_DATA_SIZE 90
 
 #define ADC_COUNT 3
