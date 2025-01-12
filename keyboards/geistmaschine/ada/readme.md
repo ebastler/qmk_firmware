@@ -2,7 +2,8 @@
 
 ![geist](imgur.com image replace me!)
 
-Ada is a HHKB style keyboard, reinventing tray mount for an optimal typing experience and easy assembly
+Ada is a HHKB style keyboard, reinventing tray mount for an optimal typing experience and easy assembly.
+
 * Keyboard Maintainer: [ebastler](https://github.com/ebastler)
 * Hardware Supported: Ada rev1
 * Hardware Availability: [geistmaschine.io](https://geistmaschine.io/)
@@ -19,7 +20,7 @@ See the [build environment setup](https://docs.qmk.fm/#/getting_started_build_to
 
 ## Bootloader
 
-Enter the bootloader in 3 ways:
+Enter the bootloader in 2 ways:
 
 * **Bootmagic reset**: Hold down the key at (0,0) in the matrix (Escape) and plug in the keyboard
 * **Physical reset button**: Briefly short the two pads marked "RESET" on the back of the PCB
