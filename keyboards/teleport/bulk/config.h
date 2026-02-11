@@ -36,8 +36,7 @@
 #define AW20216S_GLOBAL_CURRENT_MAX 150
 #define AW20216S_SCALING_MAX 150
 
-// #define RGB_MATRIX_DEFAULT_MODE RGB_MATRIX_CUSTOM_SINGLE_COLOR_RAINDROPS
-#define RGB_MATRIX_DEFAULT_MODE RGB_MATRIX_TYPING_HEATMAP
+#define RGB_MATRIX_DEFAULT_MODE RGB_MATRIX_CUSTOM_SINGLE_COLOR_RAINDROPS
 
 #define ENABLE_RGB_MATRIX_CUSTOM_SINGLE_COLOR_RAINDROPS // 0 Single color raindrops, random keys lighting up at randomized intensity
 #define ENABLE_RGB_MATRIX_CUSTOM_STATIC_GAME_MODE       // - Game mode sets the entire matrix (static) once, then stops LED refreshes
