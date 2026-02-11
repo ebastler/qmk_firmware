@@ -11,6 +11,9 @@
         "vid": "0x7774",
         "device_version": "1.0.0"
     },
+    "build": {
+        "lto": true
+    },
     "diode_direction": "ROW2COL",
     "features": {
         "bootmagic": true,
@@ -19,12 +22,11 @@
         "extrakey": true,
         "mousekey": true,
         "nkro": true,
-        "encoder": true,
-        "lto": true
+        "encoder": true
     },
     "matrix_pins": {
         "cols": [ "A0", "A1", "A2", "A3", "A4", "A5", "B0", "B9" ],
-        "rows": [ "A8", "B14", "B15", "B13", "B12", "A7", "B1", "A6", "B8", "C15" ]
+        "rows": [ "B15", "B14", "A8", "B13", "B12", "A7", "B1", "A6", "B8", "C15" ]
     },
     "encoder": {
         "rotary": [
@@ -116,7 +118,7 @@
                 {"matrix":[9,7], "label":"RIGHT", "x":15, "y":5}
             ]
         },
-        "LAYOUT_75_ansi": {
+        "LAYOUT_65_ansi": {
             "layout": [
                 {"matrix":[0,0], "label":"ESC", "x":0, "y":1},
                 {"matrix":[1,0], "label":"1", "x":1, "y":1},
@@ -194,7 +196,7 @@
                 {"matrix":[9,7], "label":"RIGHT", "x":15, "y":5}
             ]
         },
-        "LAYOUT_75_iso": {
+        "LAYOUT_65_iso": {
             "layout": [
                 {"matrix":[0,0], "label":"ESC", "x":0, "y":1},
                 {"matrix":[1,0], "label":"1", "x":1, "y":1},
