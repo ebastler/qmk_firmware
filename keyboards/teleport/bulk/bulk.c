@@ -24,7 +24,7 @@ const aw20216s_led_t PROGMEM g_aw20216s_leds[AW20216S_LED_COUNT] = {
  *   |  |           G location
  *   |  |           |           B location
  *   |  |           |           | */
-    {0, SW10_CS11,  SW10_CS12,  SW10_CS10}, // Row 0
+    {0, SW10_CS11,  SW10_CS12,  SW10_CS10}, // Row 0, LED 0
     {0, SW8_CS11,   SW8_CS12,   SW8_CS10},
     {0, SW6_CS11,   SW6_CS12,   SW6_CS10},
     {0, SW4_CS11,   SW4_CS12,   SW4_CS10},
@@ -44,7 +44,7 @@ const aw20216s_led_t PROGMEM g_aw20216s_leds[AW20216S_LED_COUNT] = {
     {1, SW7_CS8,    SW7_CS7,    SW7_CS9},
     {1, SW9_CS8,    SW9_CS7,    SW9_CS9},
 
-    {0, SW10_CS8,   SW10_CS9,   SW10_CS7},  // Row 1
+    {0, SW10_CS8,   SW10_CS9,   SW10_CS7},  // Row 1, LED 19
     {0, SW8_CS8,    SW8_CS9,    SW8_CS7},
     {0, SW6_CS8,    SW6_CS9,    SW6_CS7},
     {0, SW4_CS8,    SW4_CS9,    SW4_CS7},
@@ -66,7 +66,7 @@ const aw20216s_led_t PROGMEM g_aw20216s_leds[AW20216S_LED_COUNT] = {
     {1, SW7_CS11,   SW7_CS10,   SW7_CS12},
     {1, SW9_CS11,   SW9_CS10,   SW9_CS12},
 
-    {0, SW10_CS15,  SW10_CS14,  SW10_CS13}, // Row 2
+    {0, SW10_CS15,  SW10_CS14,  SW10_CS13}, // Row 2, LED 40
     {0, SW8_CS15,   SW8_CS14,   SW8_CS13},
     {0, SW6_CS15,   SW6_CS14,   SW6_CS13},
     {0, SW4_CS15,   SW4_CS14,   SW4_CS13},
@@ -90,7 +90,7 @@ const aw20216s_led_t PROGMEM g_aw20216s_leds[AW20216S_LED_COUNT] = {
     {1, SW9_CS3,    SW9_CS2,    SW9_CS1},
     {1, SW11_CS6,   SW11_CS5,   SW11_CS4},
 
-    {0, SW10_CS18,  SW10_CS17,  SW10_CS16}, // Row 3
+    {0, SW10_CS18,  SW10_CS17,  SW10_CS16}, // Row 3, LED 63
     {0, SW8_CS18,   SW8_CS17,   SW8_CS16},
     {0, SW6_CS18,   SW6_CS17,   SW6_CS16},
     {0, SW4_CS18,   SW4_CS17,   SW4_CS16},
@@ -108,7 +108,7 @@ const aw20216s_led_t PROGMEM g_aw20216s_leds[AW20216S_LED_COUNT] = {
     {1, SW5_CS6,    SW5_CS5,    SW5_CS4},
     {1, SW7_CS6,    SW7_CS5,    SW7_CS4},
 
-    {0, SW10_CS3,   SW10_CS2,   SW10_CS1},  // Row 4
+    {0, SW10_CS3,   SW10_CS2,   SW10_CS1},  // Row 4, LED 80
     {0, SW8_CS3,    SW8_CS2,    SW8_CS1},
     {0, SW6_CS3,    SW6_CS2,    SW6_CS1},
     {0, SW4_CS3,    SW4_CS2,    SW4_CS1},
@@ -131,7 +131,7 @@ const aw20216s_led_t PROGMEM g_aw20216s_leds[AW20216S_LED_COUNT] = {
     {1, SW9_CS15,   SW9_CS14,   SW9_CS13},
     {1, SW11_CS18,  SW11_CS17,  SW11_CS16},
     
-    {0, SW10_CS6,   SW10_CS5,   SW10_CS4}, // Row 5
+    {0, SW10_CS6,   SW10_CS5,   SW10_CS4}, // Row 5, LED 102
     {0, SW8_CS6,    SW8_CS5,    SW8_CS4},
     {0, SW6_CS6,    SW6_CS5,    SW6_CS4},
     {0, SW4_CS6,    SW4_CS5,    SW4_CS4},
@@ -151,4 +151,41 @@ const aw20216s_led_t PROGMEM g_aw20216s_leds[AW20216S_LED_COUNT] = {
     {1, SW5_CS18,   SW5_CS17,   SW5_CS16},
     {1, SW7_CS18,   SW7_CS17,   SW7_CS16},
 };
+
+uint8_t rgb_matrix_map_row_column_to_led_kb(uint8_t row, uint8_t column, uint8_t *led_i) {
+    // Stabilized switches on this board use three LEDs each for more even lighting
+    // The "center" LED is defined in keyboard.json, the two LEDs underneath the
+    // stabilizers are manually added to the array here.
+    if (row == 2 && column == 6) {          // Backspace
+        led_i[0] = 32;
+        led_i[1] = 34;
+        return 2;
+    } else if (row == 4 && column == 6) {   // ISO Enter
+        led_i[0] = 53;
+        led_i[1] = 55;
+        return 2;
+    } else if (row == 4 && column == 8) {   // Numpad Plus
+        led_i[0] = 60;
+        led_i[1] = 62;
+        return 2;
+    } else if (row == 9 && column == 6) {   // Rshift
+        led_i[0] = 92;
+        led_i[1] = 94;
+        return 2;
+    } else if (row == 8 && column == 8) {   // Numpad Enter
+        led_i[0] = 99;
+        led_i[1] = 101;
+        return 2;
+    } else if (row == 11 && column == 2) {  // Split space, left
+        led_i[0] = 105;
+        led_i[1] = 107;
+        return 2;
+    } else if (row == 11 && column == 3) {  // Split space, right
+        led_i[0] = 109;
+        led_i[1] = 111;
+        return 2;
+    }
+    return 0;
+}
+
 #endif

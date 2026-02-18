@@ -34,7 +34,7 @@
 
 /* AW20216S current control */
 #define AW20216S_GLOBAL_CURRENT_MAX 150
-#define AW20216S_SCALING_MAX 150
+#define AW20216S_SCALING_MAX 140
 
 #define RGB_MATRIX_DEFAULT_MODE RGB_MATRIX_CUSTOM_SINGLE_COLOR_RAINDROPS
 
@@ -64,9 +64,3 @@
 #define P_LED_INDEX 51
 #define SCLN_LED_INDEX 74
 #define SLSH_LED_INDEX 92
-
-/* Since the typing heatmap is broken on duplex matrix boards, force it to "slim" mode */
-#ifdef ENABLE_RGB_MATRIX_TYPING_HEATMAP
-    #define RGB_MATRIX_TYPING_HEATMAP_SLIM
-#endif
-

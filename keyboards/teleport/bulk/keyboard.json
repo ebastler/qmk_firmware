@@ -88,9 +88,9 @@
             {"matrix": [ 3, 5], "x": 114, "y": 16, "flags": 4},
             {"matrix": [ 2, 5], "x": 126, "y": 16, "flags": 4},
             {"matrix": [ 3, 6], "x": 137, "y": 16, "flags": 4},
-            {"x": 147, "y": 19, "flags": 1},                        // Backspace, left
-            {"matrix": [ 2, 6], "x": 155, "y": 16, "flags": 1},     // Backspace, center
-            {"x": 162, "y": 18, "flags": 1},                        // Backspace, right
+            {"x": 147, "y": 19, "flags": 1},                        // Backspace, left, LED 32
+            {"matrix": [ 2, 6], "x": 155, "y": 16, "flags": 1},     // Backspace, center, LED 33
+            {"x": 162, "y": 18, "flags": 1},                        // Backspace, right, LED 34
             {"matrix": [11, 4], "x": 175, "y": 16, "flags": 1},
             {"matrix": [ 3, 7], "x": 189, "y": 16, "flags": 1},
             {"matrix": [ 2, 7], "x": 201, "y": 16, "flags": 1},
@@ -110,68 +110,68 @@
             {"matrix": [ 5, 5], "x": 120, "y": 27, "flags": 4},
             {"matrix": [ 4, 5], "x": 132, "y": 27, "flags": 4},
             {"matrix": [ 5, 6], "x": 143, "y": 27, "flags": 4},
-            {"x": 159, "y": 28, "flags": 1},                        // Enter, top
-            {"matrix": [ 4, 6], "x": 156, "y": 35, "flags": 1},     // Enter
-            {"x": 159, "y": 42, "flags": 1},                        // Enter, bottom
-            {"matrix": [10, 3], "x": 175, "y": 27, "flags": 4},
-            {"matrix": [ 5, 7], "x": 189, "y": 27, "flags": 1},
+            {"x": 159, "y": 28, "flags": 1},                        // Enter, top, LED 53
+            {"matrix": [ 4, 6], "x": 156, "y": 35, "flags": 1},     // Enter, LED 54
+            {"x": 159, "y": 42, "flags": 1},                        // Enter, bottom, LED 55
+            {"matrix": [10, 3], "x": 175, "y": 27, "flags": 1},
+            {"matrix": [ 5, 7], "x": 189, "y": 27, "flags": 4},
             {"matrix": [ 4, 7], "x": 201, "y": 27, "flags": 4},
             {"matrix": [ 5, 8], "x": 212, "y": 27, "flags": 4},
-            {"x": 224, "y": 28, "flags": 1},                        // NP Plus, top
-            {"matrix": [ 4, 8], "x": 220, "y": 35, "flags": 1},     // NP Plus
-            {"x": 224, "y": 42, "flags": 1},                        // NP Plus, bottom
+            {"x": 224, "y": 28, "flags": 1},                        // NP Plus, top, LED 60
+            {"matrix": [ 4, 8], "x": 220, "y": 35, "flags": 1},     // NP Plus, LED 61
+            {"x": 224, "y": 42, "flags": 1},                        // NP Plus, bottom, LED 62
 
             {"matrix": [ 7, 0], "x":   0, "y": 38, "flags": 1},
             {"matrix": [ 6, 0], "x":  14, "y": 38, "flags": 4},
             {"matrix": [ 7, 1], "x":  25, "y": 38, "flags": 4},
             {"matrix": [ 6, 1], "x":  37, "y": 38, "flags": 4},
             {"matrix": [ 7, 2], "x":  48, "y": 38, "flags": 4},
-            {"matrix": [ 6, 2], "x":  63, "y": 38, "flags": 1},
-            {"matrix": [ 7, 3], "x":  74, "y": 38, "flags": 1},
-            {"matrix": [ 6, 3], "x":  86, "y": 38, "flags": 1},
-            {"matrix": [ 7, 4], "x":  97, "y": 38, "flags": 1},
+            {"matrix": [ 6, 2], "x":  63, "y": 38, "flags": 4},
+            {"matrix": [ 7, 3], "x":  74, "y": 38, "flags": 4},
+            {"matrix": [ 6, 3], "x":  86, "y": 38, "flags": 4},
+            {"matrix": [ 7, 4], "x":  97, "y": 38, "flags": 4},
             {"matrix": [ 6, 4], "x": 112, "y": 38, "flags": 4},
             {"matrix": [ 7, 5], "x": 123, "y": 38, "flags": 4},
             {"matrix": [ 6, 5], "x": 134, "y": 38, "flags": 4},
             {"matrix": [ 7, 6], "x": 146, "y": 38, "flags": 4},
             {"matrix": [ 7, 7], "x": 160, "y": 38, "flags": 1},
-            {"matrix": [ 6, 7], "x": 175, "y": 38, "flags": 1},
-            {"matrix": [ 7, 8], "x": 189, "y": 38, "flags": 1},
-            {"matrix": [ 6, 8], "x": 201, "y": 38, "flags": 1},
+            {"matrix": [ 6, 7], "x": 175, "y": 38, "flags": 4},
+            {"matrix": [ 7, 8], "x": 189, "y": 38, "flags": 4},
+            {"matrix": [ 6, 8], "x": 201, "y": 38, "flags": 4},
 
             {"matrix": [ 9, 0], "x":   1, "y": 48, "flags": 1},
             {"matrix": [ 8, 0], "x":  14, "y": 48, "flags": 4},
             {"matrix": [ 9, 1], "x":  25, "y": 48, "flags": 4},
             {"matrix": [ 8, 1], "x":  37, "y": 48, "flags": 4},
             {"matrix": [ 9, 2], "x":  48, "y": 48, "flags": 4},
-            {"matrix": [ 8, 2], "x":  60, "y": 48, "flags": 1},
-            {"matrix": [ 9, 3], "x":  71, "y": 48, "flags": 1},
-            {"matrix": [ 8, 3], "x":  83, "y": 48, "flags": 1},
-            {"matrix": [ 9, 4], "x":  94, "y": 48, "flags": 1},
+            {"matrix": [ 8, 2], "x":  60, "y": 48, "flags": 4},
+            {"matrix": [ 9, 3], "x":  71, "y": 48, "flags": 4},
+            {"matrix": [ 8, 3], "x":  83, "y": 48, "flags": 4},
+            {"matrix": [ 9, 4], "x":  94, "y": 48, "flags": 4},
             {"matrix": [ 8, 4], "x": 106, "y": 48, "flags": 4},
             {"matrix": [ 9, 5], "x": 117, "y": 48, "flags": 4},
             {"matrix": [ 8, 5], "x": 129, "y": 48, "flags": 4},
-            {"x": 143, "y": 51, "flags": 1},                        // Rshift, left
-            {"matrix": [ 9, 6], "x": 150, "y": 48, "flags": 1},     // Rshift
-            {"x": 157, "y": 51, "flags": 1},                        // Rshift, right
-            {"matrix": [ 8, 6], "x": 175, "y": 51, "flags": 4},
+            {"x": 143, "y": 51, "flags": 1},                        // Rshift, left, LED 92
+            {"matrix": [ 9, 6], "x": 150, "y": 48, "flags": 1},     // Rshift, LED 93
+            {"x": 157, "y": 51, "flags": 1},                        // Rshift, right, LED 94
+            {"matrix": [ 8, 6], "x": 175, "y": 51, "flags": 1},
             {"matrix": [ 9, 7], "x": 189, "y": 48, "flags": 4},
             {"matrix": [ 8, 7], "x": 201, "y": 48, "flags": 4},
             {"matrix": [ 9, 8], "x": 212, "y": 48, "flags": 4},
-            {"x": 224, "y": 50, "flags": 1},                        // NP Enter, top
-            {"matrix": [ 8, 8], "x": 220, "y": 57, "flags": 1},     // NP Enter
-            {"x": 224, "y": 64, "flags": 1},                        // NP Enter, bottom
+            {"x": 224, "y": 50, "flags": 1},                        // NP Enter, top, LED 99
+            {"matrix": [ 8, 8], "x": 220, "y": 57, "flags": 1},     // NP Enter, LED 100
+            {"x": 224, "y": 64, "flags": 1},                        // NP Enter, bottom, LED 101
 
             {"matrix": [11, 0], "x":   1, "y": 59, "flags": 1},
             {"matrix": [10, 0], "x":  15, "y": 59, "flags": 1},
             {"matrix": [11, 1], "x":  30, "y": 59, "flags": 1},
-            {"x":  43, "y": 62, "flags": 4},                        // Space, stab l
-            {"matrix": [11, 2], "x":  50, "y": 59, "flags": 4},     // Split space, l
-            {"x":  57, "y": 52, "flags": 4},                        // Space, stab l
-            {"matrix": [10, 2], "x": 73, "y": 59, "flags": 4},      // Space
-            {"x":  89, "y": 62, "flags": 4},                        // Space, stab r
-            {"matrix": [11, 3], "x":  96, "y": 59, "flags": 4},     // Split space, r
-            {"x": 103, "y": 62, "flags": 4},                        // Space, stab r
+            {"x":  43, "y": 62, "flags": 4},                        // Space, stab l, LED 105
+            {"matrix": [11, 2], "x":  50, "y": 59, "flags": 4},     // Split space, l, LED 106
+            {"x":  57, "y": 52, "flags": 4},                        // Space, stab l, LED 107
+            {"matrix": [10, 2], "x": 73, "y": 59, "flags": 4},      // Space, LED 108
+            {"x":  89, "y": 62, "flags": 4},                        // Space, stab r, LED 109
+            {"matrix": [11, 3], "x":  96, "y": 59, "flags": 4},     // Split space, r, LED 110
+            {"x": 103, "y": 62, "flags": 4},                        // Space, stab r, LED 111
             {"matrix": [10, 4], "x": 114, "y": 59, "flags": 1},
             {"matrix": [11, 5], "x": 126, "y": 59, "flags": 1},
             {"matrix": [10, 5], "x": 137, "y": 59, "flags": 1},
@@ -219,7 +219,7 @@
                 {"matrix": [ 3, 5], "x": 10,    "y": 1.5},
                 {"matrix": [ 2, 5], "x": 11,    "y": 1.5},
                 {"matrix": [ 3, 6], "x": 12,    "y": 1.5},
-                {"matrix": [ 2, 6], "x": 13,    "y": 1.5, "w": 2},      // Backspace
+                {"matrix": [ 2, 6], "x": 13,    "y": 1.5, "w": 2},          // Backspace
                 {"matrix": [11, 4], "x": 15.25, "y": 1.5},
                 {"matrix": [ 3, 7], "x": 16.5,  "y": 1.5},
                 {"matrix": [ 2, 7], "x": 17.5,  "y": 1.5},
@@ -244,7 +244,7 @@
                 {"matrix": [ 5, 7], "x": 16.5,  "y": 2.5},
                 {"matrix": [ 4, 7], "x": 17.5,  "y": 2.5},
                 {"matrix": [ 5, 8], "x": 18.5,  "y": 2.5},
-                {"matrix": [ 4, 8], "x": 19.5,  "y": 2.5, "h": 2},      // NP Plus
+                {"matrix": [ 4, 8], "x": 19.5,  "y": 2.5, "h": 2},              // NP Plus
 
                 {"matrix": [ 7, 0], "x":  0,    "y": 3.5, "w": 1.75},
                 {"matrix": [ 6, 0], "x":  1.75, "y": 3.5},
@@ -276,19 +276,19 @@
                 {"matrix": [ 8, 4], "x":  9.25, "y": 4.5},
                 {"matrix": [ 9, 5], "x": 10.25, "y": 4.5},
                 {"matrix": [ 8, 5], "x": 11.25, "y": 4.5},
-                {"matrix": [ 9, 6], "x": 12.25, "y": 4.5, "w": 2.75},   // Rshift
+                {"matrix": [ 9, 6], "x": 12.25, "y": 4.5, "w": 2.75},           // Rshift
                 {"matrix": [ 8, 6], "x": 15.25, "y": 4.75},
                 {"matrix": [ 9, 7], "x": 16.5,  "y": 4.5},
                 {"matrix": [ 8, 7], "x": 17.5,  "y": 4.5},
                 {"matrix": [ 9, 8], "x": 18.5,  "y": 4.5},
-                {"matrix": [ 8, 8], "x": 19.5,  "y": 4.5, "h": 2},      // NP Enter
+                {"matrix": [ 8, 8], "x": 19.5,  "y": 4.5, "h": 2},              // NP Enter
 
                 {"matrix": [11, 0], "x":  0,    "y": 5.5, "w": 1.25},
                 {"matrix": [10, 0], "x":  1.25, "y": 5.5, "w": 1.25},
                 {"matrix": [11, 1], "x":  2.5,  "y": 5.5, "w": 1.25},
-                {"matrix": [11, 2], "x":  3.75, "y": 5.5, "w": 2.25},   // Space
-                {"matrix": [10, 2], "x":  6,    "y": 5.5, "w": 1.75},   // Space
-                {"matrix": [11, 3], "x":  7.75, "y": 5.5, "w": 2.25},   // Space
+                {"matrix": [11, 2], "x":  3.75, "y": 5.5, "w": 2.25},           // Left space
+                {"matrix": [10, 2], "x":  6,    "y": 5.5, "w": 1.75},           // Middle space
+                {"matrix": [11, 3], "x":  7.75, "y": 5.5, "w": 2.25},           // Rught space
                 {"matrix": [10, 4], "x": 10,    "y": 5.5},
                 {"matrix": [11, 5], "x": 11,    "y": 5.5},
                 {"matrix": [10, 5], "x": 12,    "y": 5.5},
