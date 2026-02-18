@@ -29,7 +29,6 @@
 #define AW20216S_CS_PIN_1 A4
 #define AW20216S_CS_PIN_2 C4
 #define AW20216S_EN_PIN A3
-// #define AW20216S_SPI_MODE
 #define AW20216S_SPI_DIVISOR 8
 
 /* AW20216S current control */
@@ -42,25 +41,28 @@
 #define ENABLE_RGB_MATRIX_CUSTOM_STATIC_GAME_MODE       // - Game mode sets the entire matrix (static) once, then stops LED refreshes
 
 /* Define indicator LED indices, used for lighting effects  */
-#define W_LED_INDEX 43
-#define A_LED_INDEX 65
-#define S_LED_INDEX 66
-#define D_LED_INDEX 67
+#define W_LED_INDEX 42
+#define A_LED_INDEX 64
+#define S_LED_INDEX 65
+#define D_LED_INDEX 66
 
-#define CAPS_LED_INDEX 64
+#define CAPS_LED_INDEX 63
 
-#define WIN_LED_INDEX 104
+#define WIN_LED_INDEX 103
 
-#define NUM_1_LED_INDEX 21
-#define NUM_2_LED_INDEX 22
-#define NUM_3_LED_INDEX 23
-#define NUM_4_LED_INDEX 24
-#define NUM_5_LED_INDEX 25
+#define NUM_1_LED_INDEX 20
+#define NUM_2_LED_INDEX 21
+#define NUM_3_LED_INDEX 22
+#define NUM_4_LED_INDEX 23
+#define NUM_5_LED_INDEX 24
 
-#define M_LED_INDEX 89
-#define K_LED_INDEX 72
-#define O_LED_INDEX 50
-#define NUM_0_LED_INDEX 30
-#define P_LED_INDEX 51
-#define SCLN_LED_INDEX 74
-#define SLSH_LED_INDEX 92
+#define M_LED_INDEX 88
+#define K_LED_INDEX 71
+#define O_LED_INDEX 49
+#define NUM_0_LED_INDEX 29
+#define P_LED_INDEX 50
+#define SCLN_LED_INDEX 73
+#define SLSH_LED_INDEX 91
+
+// Logging (Debug only)
+// #define DEBUG_MATRIX_SCAN_RATE
