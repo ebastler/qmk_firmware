@@ -29,7 +29,7 @@
 #define AW20216S_CS_PIN_1 A4
 #define AW20216S_CS_PIN_2 C4
 #define AW20216S_EN_PIN A3
-#define AW20216S_SPI_DIVISOR 8
+#define AW20216S_SPI_DIVISOR 16
 
 /* AW20216S current control */
 #define AW20216S_GLOBAL_CURRENT_MAX 150
@@ -65,4 +65,7 @@
 #define SLSH_LED_INDEX 91
 
 // Logging (Debug only)
-// #define DEBUG_MATRIX_SCAN_RATE
+#define DEBUG_MATRIX_SCAN_RATE
+
+// Experimental
+#define MATRIX_IO_DELAY 1
