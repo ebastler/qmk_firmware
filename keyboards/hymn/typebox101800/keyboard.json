@@ -6,7 +6,7 @@
     "build": {
         "lto": true
     },
-    "diode_direction": "COL2ROW",
+    "diode_direction": "ROW2COL",
     "encoder": {
         "rotary": [
             {"pin_a": "A13", "pin_b": "B15", "resolution": 4},
